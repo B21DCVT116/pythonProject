@@ -1,6 +1,8 @@
 import os
 import numpy as np
-from Trichxuathinhanh import extract_face
+from Name1face_dataset import extract_face
+
+dataset_path = 'casimytam3.jpg'
 
 def load_dataset(dataset_path):
     faces = []
@@ -23,6 +25,7 @@ def load_dataset(dataset_path):
                 labels.append(current_label)
 
         current_label += 1
+
     # Chuyển danh sách thành numpy array
     faces_array = np.array(faces)
     labels_array = np.array(labels)
@@ -35,5 +38,5 @@ def load_dataset(dataset_path):
     print("\nLabel dictionary:")
     print(label_dict)
 
-    return np.array(faces), np.array(labels), label_dict
-load_dataset(r'D:\Code\PythonProject\Project2\PicBTL')
+# Gọi hàm để thực thi
+load_dataset('casimytam3.jpg')

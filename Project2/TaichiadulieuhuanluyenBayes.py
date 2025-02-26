@@ -1,6 +1,3 @@
-import cv2
-import os
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
@@ -8,7 +5,7 @@ from Taidulieututhumuc import load_dataset
 from Trichxuathinhanh import extract_face
 
 # Tải dữ liệu
-dataset_path = 'PicBTL'
+dataset_path = r'D:\Code\PythonProject\Project2\PicBTL'
 faces, labels, label_dict = load_dataset(dataset_path)
 
 # Chia dữ liệu thành tập huấn luyện và tập kiểm tra
